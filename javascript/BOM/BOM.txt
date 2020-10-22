@@ -1,0 +1,66 @@
+window：浏览器的窗口
+获取文档显示区域的宽高
+window.innerWidth
+window.innerHeight
+
+获取浏览器外部窗体的宽高
+window.outerWidth
+window.outerHeight
+
+打开一共新的窗口
+window.open()
+
+
+Navigator即浏览器对象，提供浏览器相关的信息
+打印浏览器相关信息
+document.write("<p>浏览器产品名称：");
+document.write(navigator.appName + "</p>");
+
+document.write("<p>浏览器版本号：");
+document.write(navigator.appVersion+"</p>");
+
+document.write("<p>浏览器内部代码：");
+document.write(navigator.appCodeName + "</p>");
+
+document.write("<p>操作系统：");
+document.write(navigator.platform + "</p>");
+        
+document.write("<p>是否启用Cookies：");
+document.write(navigator.cookieEnabled + "</p>");
+
+document.write("<p>浏览器的用户代理报头：");
+document.write(navigator.userAgent + "<p>");
+
+
+Screen对象表示用户的屏幕相关信息
+返回用户的屏幕大小，以及可用屏幕大小
+
+屏幕分辨率
+screen.width
+screen.height
+
+可视区域大小
+screen.availWidth 
+screen.availHeight
+
+
+Location表示浏览器中的地址栏
+刷新当前页面
+.reload()
+
+
+跳转到另一个页面
+方法一：
+location="跳转地址";
+方法二：
+location.assign("跳转地址");
+
+
+Location的其他属性
+协议 location.protocol:https:
+主机名 location.hostname:how2j.cn
+端口号 (默认是80，没有即表示80端口)location.port:
+主机加端口号 location.host: how2j.cn
+访问的路径 location.pathname: /k/javascript/javascript-bom-location/451.html
+锚点 location.hash:
+参数列表 location.search:

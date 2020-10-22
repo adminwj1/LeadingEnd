@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>验证账号是否已经存在</title>
+    <script>
+        function show(){
+            var oValue = document.getElementById("test").value;
+            var oFont = document.getElementById("fonts");
+            
+            if (oValue.length !=0){
+                var firstChar = oValue.charAt(0)
+                console.log(firstChar);
+                if('a' == firstChar || 'A' == firstChar){
+                    oFont.innerHTML = "账号不存在，可以使用"
+                }else{
+                    oFont.innerHTML = "账号存在，不可以使用"
+                }
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="test" placeholder="请输入账号名" onblur="show()">
+    <span id="fonts"></span>
+</body>
+</html>

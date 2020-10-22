@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串转为json</title>
+    <script>
+        var s1 = "{\"name\":\"盖伦\"";
+        var s2 = ",\"hp\":616}";
+        var s3 = s1 + s2;
+
+        console.log("这是一个json格式的字符串：" + s3);
+
+        var gareen = eval("("+s3+")");
+        console.log("这是一个JSON对象：" + gareen);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

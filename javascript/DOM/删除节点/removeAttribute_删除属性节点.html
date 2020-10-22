@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删除属性节点</title>
+    <script>
+        function removeHref(){
+            var link = document.getElementById("link");
+            link.removeAttribute("href");   // 删除后变成文本内容
+        }
+    </script>
+</head>
+<body>
+    <a id="link" href="http://www.12306.com">http://www.12306.com</a>
+    <br>
+    <button onclick="removeHref()">删除超链接的href属性</button>
+</body>
+</html>

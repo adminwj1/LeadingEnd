@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列偏移</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        .col-md-4{
+            border: 1px solid rebeccapurple;
+        }
+
+        /* .col-md-offset-4{
+            border: px solid green;
+        } */
+
+        .col-md-3{
+            border: hotpink 1px solid;
+        }
+
+        /* .col-md-offset-3{
+            border: 1px solid khaki;
+        } */
+
+        .col-md-6{
+            border: 1px solid goldenrod;
+        } 
+
+        /* .col-md-offset-6{
+            border: 1px solid greenyellow;
+        } */
+
+        .col-xs-6{
+            border: 1px solid firebrick;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">col-md-4</div>
+            <div class="col-md-4 col-md-offset-4">col-md-4 col-md-offset-4</div>
+        </div>
+
+        <div class="rot">
+            <div class="col-md-3 col-md-offset-3">col-md-3 col-md-offset-3</div>
+            <div class="col-md-3 col-md-offset-3">col-md-3 col-md-offset-3</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-6">col-md-6 col-md-offset-6</div>
+        </div>
+
+        <!-- You can also override offsets from lower grid tiers with .col-*-offset-0 classes. -->
+        <!-- 您还可以使用.col-*-offset-0类覆盖较低网格层的偏移。 -->
+        <div class="row">
+            <div class="col-xs-6 col-sm-4">col-xs-6 col-sm-4</div>
+            <div class="col-xs-6 col-sm-4">col-xs-6 col-sm-4</div>
+            <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0">col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选中所有的checkbox</title>
+    <script>
+        function selectAll(checkbox){
+            var checked = checkbox.checked;     // 返回的bool值 true
+            console.log(checked);
+            var checkboxes = document.getElementsByTagName("input");
+            for(i=0; i<checkboxes.length; i++){
+                console.log(checkboxes[i].checked);
+                checkboxes[i].checked = checked?"checked":"";
+            }
+        }
+
+        function reverse(){
+            var checkboxes= document.getElementsByTagName("input");
+            for(var i in checkboxes){
+                if(0==i)
+                    continue;
+                checkboxes[i].checked=checkboxes[i].checked?"":"checked";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="checkbox" name="" id="" onclick="selectAll(this)">全选<br>
+    <input type="checkbox"> tokyo hot <br>
+    <input type="checkbox"> dota <br>
+    <input type="checkbox"> lol <br>
+    <input type="checkbox"> wow <br>
+    <input type="checkbox"> warcraft <br>
+    <input type="checkbox"> diablo <br>
+    <a href="#" onclick="reverse()">反选</a>
+</body>
+</html>

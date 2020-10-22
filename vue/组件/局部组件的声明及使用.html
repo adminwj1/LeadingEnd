@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>局部组件的声明及使用</title>
+    <script src="../vue-v2.6.10.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 组件的名字当做成对标签来使用 -->
+        <mytemp></mytemp>
+    </div>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                msg:'123',
+            },
+
+            // 声明局部组件的方法 值是一个对象
+            components:{
+                // 组件的名字就是属性的名字
+                mytemp:{
+                    template:"<s>森林防火开发吉林省</s>"
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>

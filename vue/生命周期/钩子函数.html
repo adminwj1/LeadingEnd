@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>钩子函数</title>
+		<script src="../vue-v2.6.10.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{msg}}
+		</div>
+		
+		<script type="text/javascript">
+			var app = new Vue({
+				el:'#app',
+				data:{
+					msg:'123',
+				},
+				
+				beforeMount:function(){
+					console.log("渲染虚拟DOM之前");
+				},
+				
+				beforeCreate:function(){
+					console.log("事件绑定完了");
+				},
+				
+				updated:function(){
+					console.log("修改数据后虚拟DOM重新更新之后");
+				}
+			})
+		</script>
+	</body>
+</html>

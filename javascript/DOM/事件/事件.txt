@@ -1,0 +1,45 @@
+焦点事件
+onfocus             获取了焦点
+onblur              失去了焦点
+
+鼠标事件
+onmousedown         鼠标按下事件
+onmouseup           鼠标弹起事件
+onmousemove         鼠标经过
+onmouseover         鼠标进入
+onmouseout	        鼠标退出
+
+
+键盘事件
+onkeydown
+onkeypress	
+onkeyup	
+注：
+onkeydown
+可以获取所有键，除了打印键Prts
+可以获取用户是否点击了修饰键 (ctrl,shift,alt)
+不能判断输入的是大写还是小写
+onkeypress
+只能获取字符键
+不能获取用户是否点击了修饰键 (ctrl,shift,alt)
+可以判断输入的是大写还是小写
+
+
+点击事件
+onclick	
+ondblclick	
+
+变化事件	
+onchange
+
+提交事件
+onsubmit
+
+加载事件
+onload
+
+当前组件		
+this
+
+阻止事件的发生		
+return false

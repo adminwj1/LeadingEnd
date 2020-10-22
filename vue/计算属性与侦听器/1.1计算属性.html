@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue-v2.6.10.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="x"><br>
+        <input type="text" v-model="y" name="" id=""><br>
+        <!-- 插值表达式尽可能避免直接进行运算，性能较低 -->
+        <!-- {{x+y}} -->
+        <!-- {{adds()}} -->
+        <!-- 调用计算属性 -->
+        {{kks}}
+    </div>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                x:'',
+                y:'',
+            },
+
+            // methods:{
+                // 每调用一次，程序就执行一次
+            //     adds:function(){
+            //         return this.x + this.y + Date.now();
+            //     }
+            // }
+
+            // 声明计算属性
+            computed:{
+                kks:function(){
+                    // 调用一次后，如果在其他地方使用，其他地方的数据都是第一次调用后被缓存下来的数据
+                    // 应用场景：在多个需要呈现同样数据的地方进行使用
+                    return this.x + this.y + Date.now();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

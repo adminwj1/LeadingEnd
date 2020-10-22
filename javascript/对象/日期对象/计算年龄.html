@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算年龄</title>
+    
+    <script>
+         function fun(){
+            var Os1 = document.getElementById("s1").value;
+            var year = new Date().getFullYear();
+            age = year - Number(Os1);
+            str = "今年" + age + "岁";
+            d1 = document.getElementById("div1").innerText = str;
+        }
+    </script>
+</head>
+<body>
+    <span>请输入出生年月日：</span>
+    <br>
+    <label for="">年份</label>
+    <select name="" id="s1">
+        <option value="1996">1996</option>
+        <option value="1998">1998</option>
+        <option value="1999">1999</option>
+        <option value="2000">2000</option>
+    </select>
+    <label for="">月份</label>
+    <select name="" id="s2">
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select>
+    <label for="">日</label>
+    <select name="" id="s3">
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select>
+    <br>
+    <input type="button" value="计算年龄" onclick="fun()">
+    <div id="div1"></div>
+
+    
+</body>
+</html>

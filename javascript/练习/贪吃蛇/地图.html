@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #uls{
+            list-style: none;
+        }
+
+        #uls li{
+            border: 1px solid #ccc;
+            border-top: none;
+            border-left: none;
+            float: left;
+        }
+
+        #container{
+            border: 1px solid #ccc;
+            border-bottom: none;
+            border-right: none;
+        }
+
+        #container > div{
+            float: right ;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul id="uls"></ul>
+        <button>开始游戏</button>
+        <div>积分：0</div>
+    </div>
+    <script>
+
+        var container = $id("container"),
+            uls = $id("uls");
+            datas = {size:20,x:10,y:10};  // 宽高为20，一行10个
+        function init(){
+            // 初始化游戏
+            createMap();
+        }
+
+        function createMap(){
+            // 创建地图
+            container.style.width = (datas.size + 1)*datas.x + "px";
+            for(var i = 0; i<datas.x * datas.y;i++){
+                var oDiv = document.createElement("li");
+                oDiv.style.width = oDiv.style.height = datas.size + "px";
+                uls.appendChild(oDiv);
+            }
+        }
+
+        function $tagName(parend, child){
+            return parend.getElementByTagName(child);
+        }
+
+        function $id(id){
+            // 获取id
+            return document.getElementById(id);
+        }
+
+        init();
+    </script>
+</body>
+</html>

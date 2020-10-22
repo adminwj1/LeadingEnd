@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二级菜单</title>
+    <script src="../jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            $('.level1').mouseover(function(){
+                // console.log($(this).index());
+                $(this).next().addClass('actv').siblings().removeClass('actv');
+            })
+
+            $('.level1').mouseout(function(){
+                $(this).siblings().removeClass('actv');
+            })
+        })
+    </script>
+
+    <style>
+        body{
+            margin: 0;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu{
+            width: 200px;
+            /* border: 1px solid #000; */
+            position: relative;
+
+        }
+
+        .menu li .level1{
+            color: #fff;
+            text-decoration: none;
+            background-color:#3366cc;
+            display: block;
+            text-align: center;
+            border: 1px solid #afc6f6;
+        }
+
+        .box{
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            border: 1px solid #afc6f6;
+            top: 0;
+            left: 201px;
+            display: none;
+        }
+
+        .current{
+            margin-bottom: 100px;
+        }
+
+        .current li{
+            list-style: none;
+        }
+
+        .current li a{
+            text-align: center;
+            display: block;
+            color: #fff;
+            margin-bottom: 40px;
+            text-decoration: none;
+            background-color: #3366cc;
+            border: 1px solid #afc6f6;
+        }
+
+        .mov{
+            display: none;
+        }
+
+        .actv{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="bb">
+        <ul class="menu">
+            <li>
+                <a href="#" class="level1">电子产品 </a>
+                    <div class="box">
+                        <ul class="current">
+                            <li><a href="#">硬件</a></li>
+                            <li><a href="#">手机</a></li>
+                            <li><a href="#">平板</a></li>
+                            <li><a href="#">手表</a></li>
+                        </ul>
+                    </div>
+                    
+                <a href="#" class="level1">服装/装饰</a>
+                    <div class="box">
+                        <ul class="current">
+                            <li><a href="#">衣服</a></li>
+                            <li><a href="#">裤子</a></li>
+                            <li><a href="#">套装</a></li>
+                            <li><a href="#">鞋子</a></li>
+                        </ul>
+                    </div>
+                <a href="#" class="level1">家电电器</a>
+                    <div class="box">
+                        <ul class="current">
+                            <li><a href="#">冰箱</a></li>
+                            <li><a href="#">电视</a></li>
+                            <li><a href="#">热水器</a></li>
+                            <li><a href="#">电饭煲</a></li>
+                        </ul>
+                    </div>
+                <a href="#" class="level1">生活用品</a>
+                    <div class="box">
+                        <ul class="current">
+                            <li><a href="#">拖把</a></li>
+                            <li><a href="#">扫把</a></li>
+                            <li><a href="#">床</a></li>
+                            <li><a href="#">衣柜</a></li>
+                        </ul>
+                    </div>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

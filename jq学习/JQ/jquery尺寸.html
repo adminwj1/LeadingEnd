@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery尺寸</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        // offset()获取元素绝对位置
+        $(function(){
+            // document.title = pos.left + " | "+ pos.top;
+            // var pos = $('div').eq(2).offset();
+            var pos = $('.pos').offset();
+            var w = $('.pos').outerWidth();
+            var h = $('.pos').outerHeight();
+            // 使用绝对位置
+            $('.pop').css({left:pos.left+w, top:pos.top});
+
+            // 事件绑定(鼠标事件)
+            /*
+                mouseover() 鼠标进入（进入子元素也触发）
+                mouseout() 鼠标离开（离开子元素也触发）
+            */
+            $('.pos').mouseover(function(){
+                $('.pop').show();
+            })
+            $('.pos').mouseout(function(){
+                $('.pop').hide();
+            })
+        })
+    </script>
+
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            background-color: gold;
+        }
+
+        .pos{
+            margin-left: 500px;
+        }
+
+        .pop{
+            width: 100px;
+            height: 100px;
+            background-color: #f40;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 元素绝对位置 -->
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box pos"></div>
+    <div class="box"></div>
+
+    <div class="pop">
+        提示信息！
+    </div>
+</body>
+</html>

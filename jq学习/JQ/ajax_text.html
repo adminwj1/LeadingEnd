@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax_test</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $.ajax({
+            // 请求数据地址
+            url: 'data.json',
+            // 请求方式
+            type: 'get',
+            // 数据类型
+            // default: Intelligent Guess (Other values: xml, json,script, or html)
+            dataType: 'json',
+            // 传给服务器的请求数据（比如：我需要第一页的数据，就给服务器传需要第一页的数据请求）
+            // data:{param1: value1},
+        })
+        // 成功时
+        .done(function(data){
+            console.log(data);
+            alert(data.name + data.age + data.info[0]);
+        })
+        // 失败时
+        .fail(function(){
+            console.log("error");
+        })
+        // 默认情况
+        .always(function(){
+            console.log("complete");
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

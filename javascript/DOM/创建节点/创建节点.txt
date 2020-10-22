@@ -1,0 +1,4 @@
+createElement	创建元素节点
+appendChild     加入到另一个元素节点中
+createTextNode	创建文本节点	
+createAttribute	创建属性节点

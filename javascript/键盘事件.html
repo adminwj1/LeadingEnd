@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			box.style.position = "absolute";  // 色块绝对定位
+			box.style.width = "20px";  // 色块宽度
+			box.style.height = "20px";  // 色块高度
+			box.style.backgroundColor = "red";  // 色块背景
+			document.onkeydown = keyDown;
+			function keyDown(enevt){
+				var event = event || window.event;
+				console.log(event);
+				switch(event.keyCode){
+					case 37:
+						box.style.left = box.offsetLeft - 5 + "px";
+					break;
+					case 39:
+						box.style.left = box.offsetLeft + 5 + "px";
+					break;
+				}
+			}
+		</script>
+	</body>
+</html>

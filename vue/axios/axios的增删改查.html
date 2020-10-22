@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>axios的增删改查</title>
+</head>
+<body>
+    
+<script src="./axios.js"></script>
+
+<script>
+
+    // 请求
+    // axios.get(' http://localhost:3000/todoList/3').then(function(backData){
+    //     console.log(backData);
+    // }).catch(function(err){
+    //     console.log(err);
+    // })
+
+    // 添加
+    // axios.post('http://localhost:3000/todoList',{
+    //     id:5,
+    //     title:'刷碗',
+    //     status:true
+    // }).then(function(backData){
+    //     console.log(backData);
+    // })
+
+    // 删除
+    // axios({
+    //     method:'DELETE',
+    //     url:'http://localhost:3000/todoList/5',
+    // }).then(function(backData){
+    //     console.log(backData);
+    // })
+
+    //修改
+    axios({
+        method:'put',
+        url:'http://localhost:3000/todoList/4',
+        data:{
+            title:'洗脚',
+            status:true
+        }
+    }).then(function(backData){
+        console.log(backData);
+    })
+</script>
+</body>
+</html>

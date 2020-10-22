@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删除文本节点</title>
+    <script>
+        function removeDiv1(){
+            var parentDiv = document.getElementById("parentDiv");   // 先获取父节点，通过父节点删除相应的元素节点或删除属性、文本内容
+            var textNode = parentDiv.childNodes[0];     // 获取parentDiv下面的子节点
+            console.log(parentDiv.childNodes[0]);
+            parentDiv.removeChild(textNode);
+        }
+
+        function removeDiv2(){
+            var parentDiv = document.getElementById("parentDiv");
+            parentDiv.innerHTML="";
+        }
+
+        function recover(){
+            var parentDiv = document.getElementById("parentDiv");
+            parentDiv.innerHTML="这里是文本 ";
+        }
+    </script>
+    <style>
+        button{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="parentDiv">
+        这是文本
+    </div>
+    <button onclick="removeDiv1()">通过removechild删除div下的文本节点</button>
+    <button onclick="removeDiv2()">通过innerHTML让内容置空</button>
+    <button onclick="recover()">恢复内容</button>
+</body>
+</html>

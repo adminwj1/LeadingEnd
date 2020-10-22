@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原型集成</title>
+    <script src="../vue-v2.6.10.js"></script>
+</head>
+<body>
+    
+    <script>
+        // var obj = {
+        //     a:1,
+        // }
+
+        // obj.k = {
+        //     f(){
+        //         console.log(this.a);
+        //     }
+        // }
+
+        var f = function(){
+            this.a = 1;
+            this.b = 3;
+        }
+
+        var k = new f();
+        var obj1 = {
+            fun1(){
+                console.log(this.b);
+            }
+        }
+    </script>
+</body>
+</html>

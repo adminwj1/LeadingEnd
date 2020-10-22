@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>替换节点</title>
+    <script>
+        function replaceDiv(){
+            var d4 = document.createElement("div");
+            var text = document.createTextNode("第四个div");
+            d4.appendChild(text);
+            var d3 = document.getElementById("d3");
+            var parentDiv = document.getElementById("parentDiv");
+            parentDiv.replaceChild(d4,d3);
+        }
+    </script>
+</head>
+<body>
+    <div id="parentDiv">
+        <div id="d1">第一个div></div>
+        <div id="d2">第二个div</div>
+        <div id="d3">第三个div</div>
+    </div>
+    <button onclick="replaceDiv()">替换第3个div</button>
+</body>
+</html>

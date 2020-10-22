@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史访问记录</title>
+    <script>
+        function goBack(){
+            // 返回上一次的访问
+            history.back();
+        }
+
+        function goBack(){
+            history.go(-2);     // -1 表示上次，-2表示上上次，以此类推
+        }
+    </script>
+</head>
+<body>
+    <button onclick="goBack()">返回</button>
+    <!-- <button onclick="goBack()"></button> -->
+</body>
+</html>

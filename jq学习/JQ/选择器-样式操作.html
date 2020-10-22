@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            // 等节点加载完成后执行代码
+            // id选择器
+            $('#div1').css({color:'pink', fontSize:'26px'});   // 设置属性    
+            // class选择器
+            $('.box').css({fontSize:'30px'});       
+            // 标签选择器
+            $('.list li').css({backgroundColor:'green', color:'#fff', fontSize:'20px'});   
+
+        });
+    </script>
+
+    <style>
+        body{
+            margin: 0;
+        }
+        #div1{
+            color: green;
+        }
+
+        .list li{
+            /* color: green; */
+            /* background-color: pink; */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">这是一个div元素</div>
+    <div class="box">这是第二个div元素</div>
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+</body>
+</html>

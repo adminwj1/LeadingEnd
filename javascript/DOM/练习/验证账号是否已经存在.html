@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>验证账号是否已经存在</title>
+    <script>
+        function check(){
+            var name = document.getElementById("name").value;
+            console.log(name);
+            var noMessage = document.getElementById("noMessage");
+            console.log(noMessage);
+            var yesMessage = document.getElementById("yesMessage");
+            noMessage.style.display="none";
+            yesMessage.style.display="none";
+            console.log(yesMessage);
+            if (0 != name.length){
+                var firstChar = name.charAt(0);
+                // charAt() 返回指定位置的字符。
+                if('a' == firstChar || 'A' == firstChar){
+                    console.log(firstChar);
+                    noMessage.style.display="inline";
+                }else{
+                    console.log("no");
+                    yesMessage.style.display="inline";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="name">
+    <input type="button" value="验证" onclick="check()">
+    <span id="noMessage" style="color: red; display: none;">账号已经存在</span>
+    <span id="yesMessage" style="color: green; display: none;">账号可以使用</span>
+</body>
+</html>

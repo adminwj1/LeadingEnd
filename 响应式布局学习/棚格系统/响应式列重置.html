@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式列重置</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        .col-xs-6{
+            text-align: center;
+            border: 1px solid green;
+        }
+
+        .col-sm-3{
+            text-align: center;
+            border: 1px solid pink;
+        }
+
+        .col-sm-5{
+            text-align: center;
+            border: 1px solid purple;
+        }
+
+        .col-sm-offset-2{
+            text-align: center;
+            border: 1px solid gold;
+        }
+
+        .col-lg-6{
+            text-align: center;
+            border: 1px solid teal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <!-- 响应式重置 -->
+        <div class="row">
+            <div class="col-xs-6 col-sm-3">col-xs-6 col-sm-3</div>
+            <div class="col-xs-6 col-sm-3">col-xs-6 col-sm-3</div>
+            <div class="clearfix visible-xs-block"></div>
+            <div class="col-xs-6 col-sm-3">col-xs-6 .col-sm-3</div>
+            <div class="col-xs-6 col-sm-3">col-xs-6 .col-sm-3</div>
+        </div>
+    <!-- 重置偏移 -->
+        <div class="row">
+            <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+            <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+          </div>
+          
+          <div class="row">
+            <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+            <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+          </div>
+    </div>
+    
+</body>
+</html>

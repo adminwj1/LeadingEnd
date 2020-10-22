@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建文本节点</title>
+    <script>
+        function add(){
+            var p =document.createElement("p");
+            var text = document.createTextNode("这是通过DOM创建出来的<p>");     // 创建文本节点
+            p.appendChild(text);    // 将文本节点添加到p节点上
+            var div1 = document.getElementById("d");
+            div1.appendChild(p);    // 再将p节点添加到div1节点上进行显示
+        }
+    </script>
+</head>
+<body>
+    <div id="d">Hello HTML DOM</div>
+    <button onclick="add()">在div中追加一个p元素</button>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+<body>
+    
+    <script>
+        // this永远指向一个对象
+        // 什么时候指向什么对象
+        // this的指向和函数的作用域没有关系
+        
+        /*
+        var o1 = {
+            name:'李四',
+            age:19
+        }
+
+        function f(){
+            // var age = 11;
+            console.log(this.age);
+        }
+
+        var o2 = {name:'王五',
+            age:18,
+            f2:f    // 将函数f当做值传入对象中
+        }
+
+        o1.f3 = o2.f2;  // 向对象中新添加一个属性f3，值是02.f2（也就是函数f）
+        o1.f3();
+        */
+
+        var o1 = {
+            name:'李四',
+            f1:function(){
+                console.log(this.name);
+                return this.name
+            }
+        }
+
+        var o2 = {
+            name:'王五',
+            f2:o1.f1()
+        }
+
+        o2.f2;
+        console.log(o2.f2);
+    </script>
+</body>
+</html>

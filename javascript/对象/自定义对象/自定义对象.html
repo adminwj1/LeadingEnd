@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义对象</title>
+    <script>
+        var hero = new Object();
+        hero.name = "盖伦";     // 定义一个属性name，并且赋值
+        hero.kill = function(){
+            document.write(hero.name + "正在杀敌<br>");
+        }
+
+        hero.kill();    // 调用kill函数
+
+
+        // 通过function设计一个对象
+        function Hero(name){
+            this.name = name;
+            this.kill = function(){
+                document.write(this.name + "正在杀敌<br>");
+            }
+        }
+
+        var gareen = new Hero("亚索");      // 实例化对象
+        gareen.kill();  // 调用方法
+
+        var teemo = new Hero("提莫");
+        teemo.kill();
+
+        // 为已经存在的对象，增加行的方法
+        Hero.prototype.keng = function(){
+            document.write(this.name + "正在坑队友<br>");
+        }
+
+        gareen.keng();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

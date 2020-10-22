@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>终止重复执行</title>
+    <script>
+        function printTime(){
+            var d = new Date();
+            var h= d.getHours();
+            var m= d.getMinutes();
+            var s= d.getSeconds();
+            document.getElementById("time").innerHTML= h+":"+m+":"+s;
+            
+            if(s % 5 == 0){
+                clearInterval(t);
+                alert("计时器被终止了！！！");
+            }
+        }
+        var t = setInterval(printTime,1000);
+       
+    </script>
+</head>
+<body>
+    <div id="time"></div>
+</body>
+</html>

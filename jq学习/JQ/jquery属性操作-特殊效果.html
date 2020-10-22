@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery属性操作-特殊效果</title>
+    <script src="jquery-3.4.1.js"></script>
+    <style>
+        .box{
+            width: 300px;
+            height: 150px;
+            background-color: pink;
+        }
+    </style>
+    <script>
+        $(function(){
+            // fadeOut() 淡出
+            // $('#btn').click(function(){
+            //     $('.box').fadeOut();
+            // });
+           
+            // fadeToggle() 切换淡入淡出
+            // $('#btn').click(function(){
+            //     $('.box').fadeToggle();
+            // });
+
+            // 直接显示和隐藏
+            // $('#btn').click(function(){
+            //     $('.box').toggle();
+            // });
+
+            // 依次展开或卷起某个元素
+            $('#btn').click(function(){
+                $('.box').slideToggle();
+            });
+        });
+    </script>
+    
+</head>
+<body>
+   <input type="button" name="" value="效果" id="btn">
+   <div class="box"></div>
+</body>
+</html>

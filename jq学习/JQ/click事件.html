@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click事件</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            $('#btn').click(function(){
+                // 切换样式 toggleClass()
+                $('.box').toggleClass('sty');
+            })
+        })
+    </script>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+
+        .sty{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" name="" value="切换" id="btn">
+    <div class="box"></div>
+</body>
+</html>

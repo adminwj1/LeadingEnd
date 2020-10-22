@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            // html()取出或设置html内容
+            console.log($('.box').html());
+
+            // 写入
+            $('.box').html('<a href="http://www.baidu.com">百度一下</a>');
+
+            // attr() 取出或设置某个属性的值
+            // attr的写入操作
+            $('.box').attr({title:'这是一个div！'});
+
+            // attr的读取操作
+            console.log($('.box').attr('class'));
+
+            // prop()读取属性状态
+            console.log($('#check').prop('checked'));
+
+            // prop()设置属性状态
+            console.log($('#check').prop({checked:false}));
+
+            // text() 取出或设置text内容
+            console.log($('#div1').text());
+        });
+        
+    </script>
+</head>
+<body>
+    <div class="box">这是一个div元素</div>
+
+    <input type="checkbox" name="" id="check" checked>多选框
+
+    <div id="div1">
+        <span>
+            这是div中的span标签
+        </span>
+    </div>
+</body>
+</html>

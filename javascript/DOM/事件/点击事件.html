@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点击事件</title>
+    <script>
+        function singleClick(){
+            document.getElementById("message").innerHTML="单击按钮";
+        }
+
+        function doubleClick(){
+            document.getElementById("message").innerHTML="双击按钮";
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="用于演示单击和双击" onclick="singleClick()" ondblclick="doubleClick()">
+    <br>
+    <br>
+    <div id="message"></div>
+</body>
+</html>

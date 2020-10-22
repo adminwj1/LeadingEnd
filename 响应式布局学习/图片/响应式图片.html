@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式图片</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        div[class*='col-']{
+            padding: 0;
+            border: 1px solid #000;
+        }
+
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        .img-responsive 响应式图片
+        .center-block  图片居中
+        图片的相应：如果容器的宽度比图片大，图片就等于自己的宽度
+        如果容器的宽度比图片小，那么图片的宽度等于容器的宽度减去左右的padding值
+    -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" style="width: 500px;">
+                <img src="../images/location_bg.jpg" alt="" srcset=""height="600px">
+            </div>
+            <!-- <div class="col-md-9">
+                <img src="../images/location_bg.jpg" alt="" srcset="" class="img-responsive img-circle">
+                <img src="../images/location_bg.jpg" alt="" srcset="" class="img-responsive img-thumbnail">
+            </div> -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标事件</title>
+    <script>
+        var Number = 0;
+        function down(){
+            document.getElementById("message").innerHTML="按下了鼠标";
+        }
+        function up(){
+            document.getElementById("message").innerHTML="弹起了鼠标";
+        }
+
+        function move(){
+            document.getElementById("message").innerHTML="鼠标经过次数：" + (++Number);
+            console.log(Number);
+        }
+
+        function over(){
+            document.getElementById("message").innerHTML="鼠标进入次数：" + (++Number);
+        }
+
+        function out(){
+            document.getElementById("message").innerHTML="鼠标退出";
+            
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="用于演示按下和弹起" name="" id="" onmousedown="down()" onmouseup="up()">
+    <input type="button" value="用于演示鼠标经过" name="" id="" onmousemove="move()">
+    <input type="button" value="用于演示鼠标进入" name="" id="" onmouseover="over()">
+    <input type="button" value="用于演示鼠标退出" name="" id="" onmouseout="out()">
+    <div id="message"></div>
+</body>
+</html>

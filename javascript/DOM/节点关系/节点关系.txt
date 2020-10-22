@@ -1,0 +1,12 @@
+parentNode	            父节点关系	
+previousSibling
+
+nextSibling	            同胞节点关系
+
+childNodes	            子节点关系	
+childNodes
+
+children	            childNodes和children的区别
+注：
+childNodes 会包含文本节点
+children 会排除文本节点

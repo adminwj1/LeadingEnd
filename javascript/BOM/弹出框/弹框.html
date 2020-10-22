@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹框</title>
+    <script>
+        function register(){
+            alert("注册成功");
+        }
+
+        function del(){
+            var d = confirm("是否要删除");
+            alert(typeof d + " " + d);
+        }
+
+        function p(){
+            var name = prompt("请输入用户名：");
+            alert("您输入的用户名是：" + name);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="register()">注册</button>
+    <br />
+    <button onclick="del()">删除</button>
+    <br />
+    <button onclick="p()">请输入用户名</button>
+</body>
+</html>

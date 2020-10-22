@@ -1,0 +1,148 @@
+		.masthead{
+			margin-bottom: 0;
+			color: #fff;
+			padding: 90px 0 110px;
+		}
+		
+		.masthead h1{
+			line-height: 1;
+			letter-spacing: -2px;
+			font-weight: 700;
+		}
+		
+		.magin{
+			margin: 0;
+		}
+		
+		.jumbotron{
+			background: url(./images/bs-docs-masthead-pattern.png)repeat 50%;
+			text-align: center;
+			text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+			background: linear-gradient(45deg,#020031,#6d3353);
+		}
+		
+		.masthead-button-links{
+			margin-top: 30px;
+		}
+		
+		.masthead p {
+			font-size: 40px;
+			font-weight: 200;
+			line-height: 1.25;
+		}
+		
+		.btn-lg.btn-shadow {
+		    padding: 13px 35px 17px;
+		}
+		
+		.btn-primary.btn-shadow {
+		    box-shadow: inset 0 -4px 0 #23527c;
+		    border: 0;
+		    color: #fff;
+		}
+		
+		.masthead-links{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		
+		.jumbotron a{
+			color: hsla(0,0%,100%,.5);
+		}
+		
+		a{
+			background-color: transparent;
+		}
+		
+		a:hover{
+			color: #23527C;
+			text-decoration: none;
+		}
+		
+		.projects-header{
+			width: 60%;
+			text-align: center;
+			font-weight: 200;
+			display: block;
+			margin: 60px auto 40px;
+		}
+		
+		.kk{
+			font-size: 42px;
+			letter-spacing: -1px;
+		}
+		
+		/* .projects-header h2{
+			font-size: 42px;
+			letter-spacing: -1px;
+		} */
+		p{
+			margin: 0 0 10px;
+		}
+		
+		.projects .thumbnail{
+			text-align: center;
+		}
+		
+		.projects .thumbnail .caption{
+			height: 200px;
+			overflow-y: hidden;
+			color: #555;
+		}
+		
+		.projects .thumbnail img {
+			max-width: 100%;
+			height: auto;
+		}
+		
+		@media (max-width: 768px) {
+		    .cx {
+		        font-size: 18px;
+				font-weight: 200;
+				line-height: 1.25;
+		    }
+			
+		}
+		
+		@media (max-width: 768px) {
+			.kk{
+				font-size: 30px;
+				letter-spacing: -1px;
+			}
+		}
+.footer{
+	color: #777;
+	padding: 30px 0;
+	border-top: 1px solid #E5E5E5;
+	margin-top: 70px;
+}
+
+.footer-bottom{
+	font-size: 13px;
+}
+
+hr{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+	border-top: 1px solid #eee;
+}
+
+.footer-top .about>div h4 {
+    color: #563d7c;
+    font-size: 16px;
+}
+
+.footer a{
+	text-decoration: none;
+	color: #777;
+}
+
+.footer a:hover{
+	color: #23527c;
+}
+
+.footer-bottom{
+	margin: 0;
+}

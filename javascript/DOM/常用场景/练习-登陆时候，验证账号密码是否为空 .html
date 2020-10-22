@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习-登陆时候，验证账号密码是否为空 </title>
+    <script>
+        function login(){
+            var oName = document.getElementById("name").value;
+            var oPwd = document.getElementById("pwd").value;
+            
+            console.log(oName);
+            console.log(oPwd);
+            if(oName != 0 && oPwd != 0){
+                location="http://www.baidu.com"
+            }else{
+                alert("账号或密码为空登录失败！");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="name">
+            账号：
+        </label>
+        <input type="text" id="name">
+        <br>
+        <label for="pwd">
+            密码：
+        </label>
+        <input type="password" id="pwd">
+        <br>
+        <input type="button" value="登陆" onclick="login()">
+    </form>
+</body>
+</html>

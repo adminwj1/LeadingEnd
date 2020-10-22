@@ -1,0 +1,8 @@
+获取节点
+document.getElementById         通过id获取元素节点
+getElementsByTagName	        通过标签名称获取元素节点	
+getElementsByClassName	        通过类名获取元素节点	
+getElementsByName	            通过表单元素的name获取元素节点	
+null	                        为什么会获取不到?	
+attributes	                    获取属性节点	
+childNodes	                    获取内容节点

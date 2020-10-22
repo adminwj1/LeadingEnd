@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>当前主键</title>
+    <script>
+        function singleClick(button){
+            var s = "被点击的按钮上的文本是：" + button.value;
+            document.getElementById("message").innerHTML = s;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="演示this的按钮1" onclick="singleClick(this)">
+    <input type="button" value="演示this的按钮2" onclick="singleClick(this)">
+    <br><br>
+    <div id="message"></div>
+</body>
+</html>

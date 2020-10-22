@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二级菜单</title>
+    <style>
+        .box{
+            margin: 0;
+            padding: 0;
+            /* position: relative; */
+            width: 120px;
+            height: auto;
+            /* text-decoration: none; */
+        }
+
+        .men{
+            position: relative;
+            width: 120px;
+            height: 35px;
+            text-align: center;
+            border-top: orchid solid 1px;
+            border-left: orchid solid 1px;
+            border-right: orchid solid 1px;
+        }
+
+        
+        .men:nth-child(5){
+            border-bottom: orchid solid 1px;
+        }
+
+        .level{
+            line-height: 35px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .box2{
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            left: 120px;
+            list-style: none;
+            display: none;
+            border: 1px solid #000;
+        }
+
+        .box2>li{
+            width: 120px;
+            height: 35px;
+        }
+
+        .box2>li>a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <ul class="box">
+            <li class="men" onmousemove="show(this)" onmouseout="hide(this)">
+                <a href="" class="level">一</a>
+                <ul class="box2">
+                    <li><a href="">11</a></li>
+                    <li><a href="">11</a></li>
+                    <li><a href="">11</a></li>
+                </ul>
+            </li>
+            <li class="men" onmousemove="show(this)" onmouseout="hide(this)">
+                <a href="" class="level">二</a>
+                <ul class="box2">
+                    <li><a href="">22</a></li>
+                    <li><a href="">22</a></li>
+                    <li><a href="">22</a></li>
+                </ul>
+            </li>
+            <li class="men" onmousemove="show(this)" onmouseout="hide(this)">
+                <a href="" class="level">三</a>
+                <ul class="box2">
+                    <li><a href="">33</a></li>
+                    <li><a href="">33</a></li>
+                    <li><a href="">33</a></li>
+                </ul>
+            </li>
+            <li class="men" onmousemove="show(this)" onmouseout="hide(this)">
+                <a href="" class="level">四</a>
+                <ul class="box2">
+                    <li><a href="">44</a></li>
+                    <li><a href="">44</a></li>
+                    <li><a href="">44</a></li>
+                </ul>
+            </li>
+            <li class="men" onmousemove="show(this)" onmouseout="hide(this)">
+                <a href="" class="level">五</a>
+                <ul class="box2">
+                    <li><a href="">55</a></li>
+                    <li><a href="">55</a></li>
+                    <li><a href="">55</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+        function show(li){
+            var ul = li.getElementsByTagName('ul')[0];
+            ul.style.display = "block"
+        }
+        function hide(li){
+            var ul = li.getElementsByTagName('ul')[0];
+            ul.style.display = "none"
+        }
+    </script>
+</body>
+</html>

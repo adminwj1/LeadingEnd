@@ -1,0 +1,51 @@
+.margin_right{
+	margin-right: 0;
+}
+
+.top{
+	/* 警告框的margin-top值 */
+	margin-top: 10px;
+}
+
+.img-size{
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+}
+
+/* 边距 */
+.mar-t15{
+	margin-top: 15px;
+}
+
+.mar-r10{
+	margin-right:10px;
+}
+
+.page-header{
+	margin-top: 0;
+}
+
+.page-header h1{
+	margin: 0;
+	font-size: 16px;
+}
+
+/* 搜索表单 */
+.user_search{
+	padding: 10px;
+	border: 1px solid #DDDDDD;
+	border-top: none;
+}
+
+/* 用户管理padding */
+.pal-10{
+	padding-left: 10px;
+}
+
+/* 媒体查询 */
+@media screen and (max-width: 768px) {
+	.FontSize{
+		font-size: 10px;
+		}
+}

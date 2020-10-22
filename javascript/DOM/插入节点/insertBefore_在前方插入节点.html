@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在前方插入节点</title>
+    <script>
+        function insertDiv(){
+            var d25 = document.createElement("div");
+            var text = document.createTextNode("第二点五个div");
+            d25.appendChild(text);
+            var parentDiv = document.getElementById("parentDiv");
+            var d3 = document.getElementById("d3");
+            parentDiv.insertBefore(d25, d3);
+        }
+    </script>
+</head>
+<body>
+    <div id="parentDiv">
+        <div id="d1">第一个div</div>
+        <div id="d2">第二个div</div>
+        <div id="d3">第三个div</div>
+    </div>
+
+    <button onclick="insertDiv()">在第二盒第三之间，插入第二点五个div</button>
+</body>
+</html>

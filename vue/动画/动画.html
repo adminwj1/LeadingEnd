@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue-v2.6.10.js"></script>
+    <style>
+        .fade-leave-active{
+            transition: opacity 2s;
+        }
+
+        .fade-leave-to{
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- vue的动画只是帮助我们来切换css样式，动画效果都是通过css来实现的 -->
+        <transition name="fade">
+            <p v-if="show">1111</p>
+        </transition>
+        <input type="button" value="按钮" @click="cli">
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                show:true
+            },
+            methods:{
+                cli(){
+                    this.show = !this.show;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

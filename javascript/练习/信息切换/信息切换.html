@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息切换</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            color: 000;
+        }
+        #men{
+            width: 990px;
+            border-bottom: 4px solid #f60;
+            margin: 100px 0 auto;
+        }
+
+        #box{
+            list-style: none;
+            height: 50px;
+        }
+
+        .sec{
+            background-color: #f60;
+        }
+
+        .sec>a{
+            font-size: 18px;
+            color: #fff;
+        }
+
+        #box li{
+            margin-top: 14px;
+            float: left;
+            padding: 8px 20px;
+
+        }
+
+        #box li a{
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .cur{
+            display: block;
+        }
+
+        .active{
+            display: none;
+        }
+    </style>
+
+    <script>
+        window.onload = function(){
+            oBox = document.getElementById("box");
+            lis = oBox.getElementsByTagName('li');
+            for (var i=0;i<lis.length; i++){
+                lis[i].onclick = function(){
+                    for(var i=0;i<lis.length;i++){
+                        lis[i].className = "";                        
+                    }
+                    this.className = "sec";                    
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+    <div id="men">
+        <ul id="box">
+            <li class="sec">
+                <a href="#">前端</a>
+            </li>
+            <li>
+                <a href="#">后端</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

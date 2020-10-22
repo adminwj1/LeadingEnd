@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Maizi Admin</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="CSS/index.css"/>
+		<script src="bootstrap/js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.container{
+				width: 98%
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav class="nav navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					<a href="admin.html" class="navbar-brand">Maizi Admin</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="admin.html"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;后台首页</a></li>
+						<li><a href="user.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户管理</a></li>
+						<li class="active"><a href="content.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;内容管理</a></li>
+						<li><a href="tag.html"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;标签管理</a></li>
+					</ul>
+					
+					<ul class="nav navbar-nav navbar-right margin_right">
+						<!-- 下拉菜单设置 -->
+						<li class="dropdown">
+							
+							<a type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;
+								admin
+								<!-- 下拉图标 -->
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="admin.html"><span class="glyphicon glyphicon-screenshot"></span>&nbsp;&nbsp;前台首页</a></li>
+								<li><a href="admin.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人主页</a></li>
+								<li><a href="admin.html"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;个人设置</a></li>
+								<li><a href="admin.html"><span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;账户中心</a></li>
+								<li><a href="admin.html"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;我的手藏</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;退出</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 hidden-xs">
+					<div class="list-group">
+						<a href="content.html" class="list-group-item">管理文章</a>
+						<a href="content_post.html" class="list-group-item active">添加文章</a>
+					</div>
+				</div>
+				<div class="col-md-10 mar-t15">
+					<div class="page-header">
+						<h1>文章列表</h1>
+					</div>
+					<ul class="nav nav-tabs">
+						<li><a href="content.html">管理文章</a></li>
+						<li  class="active"><a href="content_post.html">添加文章</a></li>
+					</ul>
+					<form action="#" method="">
+						<div class="list-group">
+							<label for="title">标题</label>
+							<input type="text" name="" id="title" placeholder="输入文章标题" value=""  class="form-control"/>
+							<label for="content">正文类容</label>
+							<textarea rows="5" cols="10" placeholder="输入文章正文部分" class="form-control"></textarea>
+							<label class="checkbox-inline mar-t15" id="all">
+								<input type="checkbox" name="" id="all" value="" />全部置顶
+							</label>
+							<button type="button" class="btn btn-default pull-right mar-t15">发布文章</button>
+						</div>
+					</form>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>

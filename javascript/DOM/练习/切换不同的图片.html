@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切换不用的图片</title>
+    <script>
+        function switch1(){
+            var img = document.getElementById("img");
+            img.src = "./gareen.jpg";
+        }
+        function switch2(){
+            var img = document.getElementById("img");
+            img.attributes["src"].nodeValue="./katarina.jpg";
+        }
+
+    </script>
+</head>
+<body>
+    <input type="button" value="通过src属性切换图片1" onclick="switch1()">
+    <input type="button" value="通过属性节点切图片2" onclick="switch2()">
+    <div>
+        <img id="img" src="./gareen.jpg" alt="" srcset="" width="120px" height="120px">
+        <!-- <img src="./katarina.jpg" alt="" srcset="" width="120px" height="120px" style="display: none;"> -->
+    </div>
+</body>
+</html>

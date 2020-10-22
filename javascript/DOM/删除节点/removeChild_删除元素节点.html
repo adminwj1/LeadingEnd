@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删除元素节点</title>
+    <script>
+        function removeDiv(){
+            var parentDiv = document.getElementById("parentDiv");
+            var div2 = document.getElementById("div2");
+            console.log(div2);
+            if(div2 != null){
+                // var div2 = document.getElementById("div2");
+                parentDiv.removeChild(div2);
+            }else{
+                alert("div2节点已被删除或不存在！");
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <div id="parentDiv">
+        <div id="di1">安全的div</div>
+        <div id="div2">即将被删除的div</div>
+    </div>
+    <button onclick="removeDiv()">删除第二个div</button>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            // 获取样式
+            alert($('.div1').css('fontSize'));
+
+            // 设置样式：
+            $('.div1').css({backgroundColor:'gold'});
+
+            // 增加样式 .addClass()
+            $('.div1').addClass('big');
+
+            // 删除样式 .removeClass()
+            $('.div1').removeClass('div1');
+        })
+    </script>
+
+    <style>
+        .big{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">这是一个div元素</div>
+</body>
+</html>

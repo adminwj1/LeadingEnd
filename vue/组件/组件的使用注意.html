@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组件的使用注意</title>
+    <script src="../vue-v2.6.10.js"></script>
+</head>
+<body>
+    <div id="vv">
+        <!-- 
+            html的标签时不区分大小写的 
+            组件的名字如果有大写，那么大写转小写后前面加一个横杠就可以了
+            如果首字母大写，直接转小写就可以
+            template的内容有且只有一个根节点，多个根级别的同级节点报错
+        -->
+        <my-Ko></my-Ko>
+        <!-- <myko></myko> -->
+    </div>
+
+
+    <script>
+        // js 的变量名是区分大小写的
+        var app = new Vue({
+            el:'#vv',
+            data:{
+
+            },
+            components:{
+                myKo:{
+                    template:'<div><i>呵呵呵呵呵</i><s>SDK随叫随到开了房</s></div>'
+                },
+                myko:{
+                    template:'<i>呵呵asldjsaljdks呵呵呵</i>'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

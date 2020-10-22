@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建元素节点_createElement</title>
+    <script>
+        function add(){
+            var hr  = document.createElement("hr");
+            var div1 = document.getElementById("d");
+            div1.appendChild(hr);   // 将hr节点添加到div1节点上
+        }
+    </script>
+</head>
+<body>
+    <div id="d">Hello HTML DOM</div>
+    <button onclick="add()">在div中追加一共hr元素</button>
+</body>
+</html>

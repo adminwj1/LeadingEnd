@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseenter和mouseleave</title>
+    <script src="jquery-3.4.1.js"></script>
+    <!-- 
+        mouseenter() 鼠标进入（进入子元素不触发）
+        mouseleave() 鼠标离开（离开子元素不触发）
+    -->
+    <script>
+        $(function(){
+            // 进入子元素不会触发事件
+            // 鼠标的mouseenter事件
+            $('#div1').mouseenter(function(){
+                $(this).stop().animate({marginTop:50});
+            });
+            // 鼠标的mouseleave事件
+            $('#div1').mouseleave(function(){
+                $(this).stop().animate({marginTop:100});
+            });
+        })
+    </script>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+            margin: 100px auto 0;
+        }
+
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="box">
+        <!-- 会产生事件冒泡 -->
+        <div class="son"></div>
+    </div>
+</body>
+</html>

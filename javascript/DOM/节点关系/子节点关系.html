@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子节点关系</title>
+    <script>
+        function showfirst(){
+            var div = document.getElementById("parentDiv");
+            console.log(div.parentNode);
+            console.log(div.firstChild.nodeName);
+        }
+
+        function showlast(){
+            var div = document.getElementById("parentDiv");
+            console.log(div.lastChild.nodeName);
+        }
+
+        function showall(){
+            var div = document.getElementById("parentDiv");
+            console.log(div.childNodes.length);
+        }
+    </script>
+</head>
+<body>
+    <div id="parentDiv">
+            父Div的内容
+        <div id="d1">第一个div</div>
+        <div id="d2">第二个div</div>
+        <div id="d3">第三个div</div>
+    </div>
+        
+        <button onclick="showfirst()">第一个子节点</button>
+        <button onclick="showlast()">最后一个子节点</button>
+        <button onclick="showall()">所有子节点数量</button>
+</body>
+</html>

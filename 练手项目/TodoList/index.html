@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务清单</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+	<link rel="icon" href="./images/任务清单.ico"/>
+    <script src="./bootstrap/js/jquery-3.4.1.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./JS/vue-v2.6.10.js"></script>
+</head>
+<body>
+    <div class="men" id="app">
+        <div class="container">
+			<h1 class="font-padd text-center bg-warning text-success">任务清单</h1>
+        	<div class="col-md-3 hidden-sm hidden-xs pull-left">
+        		<!-- 大屏下显示已完成的任务清单 -->
+				<div class="input-mar-top panel panel-default">
+					<div class="panel-heading">已完成任务清单</div>
+					<div class="panel-body">
+						<!-- 列表，用于存放任务 -->
+						<ul class="list-group">
+							<div class="items" v-for="(val,key) in del_todData">
+								<s>{{val.content}}</s>
+							</div>
+						</ul>
+					</div>
+				</div>
+        	</div>
+			<div class="list-heig col-md-9 col-sm-12 col-xs-12 pull-right">
+				<!-- 任务输入框 -->
+				<form action="#" method="">
+					<div class="form-group">
+						<input class="input-mar-top form-control" v-model="input_data" @keyup.enter="addTodoList" type="text" name="" id="" value="" placeholder="请添加您的任务"/>
+					</div>
+				</form>
+				<!-- 面板，用于呈现未完成的任务 -->
+				<div class="panel panel-default">
+					<div class="panel-heading">未完成任务清单</div>
+					<div class="panel-body">
+						<!-- 列表，用于存放任务 -->
+						<ul class="list-group">
+							<div class="items" v-for="(val, key) in todoData">
+								<a class="font-style" herf="#" @click="del(key)">{{val.content}}</a>
+							</div>
+						</ul>
+						<div class="panel-footer">
+							当前未完成的任务数：{{indexs}}
+						</div>
+					</div>
+				</div>
+				<!-- 任务完成情况 -->			
+				<!-- 进度条 -->
+				<div class="progress">
+				  <div class="progress-bar progress-bar-striped progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+				    60%
+				  </div>
+				</div>
+				<!-- 小屏幕下显示已完成的任务 -->
+				<div class="panel panel-default hidden-lg hidden-md">
+					<div class="panel-heading">已完成的任务</div>
+					<div class="panel-body">
+						<ul class="list-group">
+							<div class="items" v-for="(val,key) in del_todData">
+								<s>{{val.content}}</s>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+
+    <script>
+		var listData = [
+			{id:'',content:''}
+
+		]
+		var newArr = [{
+			id:'',
+			content:''
+		}]
+        var app = new Vue({
+			el:'#app',
+			data:{
+				input_data:'',
+				todoData:listData,
+				ched:false,
+				del_todData:newArr,
+
+			},
+			
+			methods:{
+				addTodoList:function(){
+					// alert("敲击了回车键")
+					/*
+						内容不能为空的判断
+						先获取文本框内容
+						创建一个对象
+						将新对象添加进todoData数组
+					*/
+				   if(this.input_data == ""){
+					   // 内容不能为空的判断
+					   alert("内容不能为空！！！");
+				   }else{
+					   // 先获取文本框内容
+					   var con = this.input_data;
+					   // console.log(con);
+					   // 创建id值
+					   var ids = this.todoData.length == 0?1:this.todoData[this.todoData.length-1].id+1;
+					   // 创建对象
+					   var od = {id:ids,content:con};
+					   // console.log(od)
+					   // 将新对象添加进todoData数组
+					   this.todoData.push(od);
+					   // 情况输入原始内容
+					   this.input_data = '';
+				   }
+				},
+				
+				del:function(key){
+					// 用于删除已完成的任务，将删除的任务存在新的数组中
+					var del_todData = this.todoData.splice(key);
+					var od = {
+						id:del_todData[0].id,
+						content:del_todData[0].content
+					}
+					newArr.push(od);
+				},
+				
+			},
+			computed:{
+				// 统计未完成任务数量
+				indexs:function(){
+					return this.todoData.length-1;
+				}
+			}
+        })
+    </script>
+</body>
+</html>

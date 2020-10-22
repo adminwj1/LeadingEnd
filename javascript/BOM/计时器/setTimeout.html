@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+    <script>
+        function printTime(){
+            var d= new Date();
+            var h = d.getHours();
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+            document.getElementById("time").innerHTML = h + ":" + m + ":" + s;
+            
+        }
+        function showTime(){
+            setTimeout(printTime,3000);
+
+        }
+    </script>
+</head>
+<body>
+    <div id="time"></div>
+    <button onclick="showTime()">点击后3秒钟后显示当前时间，并且只显示一次</button>
+</body>
+</html>

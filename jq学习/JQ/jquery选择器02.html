@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            // next() 同级下的一个元素
+            // nextAll() 同级下面的所有元素
+            $('#div1').nextAll('p').css({color:'red'});
+
+            // parent() 选择元素的父级元素，用于层级比较少的。如果嵌套层级比较多就是用closest(),选择离当前选择元素最近的那个父元素
+            $('#span01').parent().css({width:'100px',height:'100px', backgroundColor:'gold'});
+
+            // 选择离最近的元素，元素可以是父级，可以是子级
+            $('#span02').closest('div').css({width:'200px',height:'200px', backgroundColor:'green'});
+            
+            // $('a').css({'text-decoration':'none'});
+            $('a').css({textDecoration:'none'});
+
+            // chlidren(.list) 选择list的所有子元素，end()返回父级元素
+            // chlidren和元素选择器的区别：前者可以回到父级元素，后者者不能回到父级元素
+            $('.list').children().css({backgroundColor:'pink', height:'20px', marginBottom:'10px', lineHeight:'20px'})
+            .end().css({backgroundColor:'#f40'});
+
+            // siblings() 选择同级的元素，li:eq(2) 选择.list2元素下的第3个li
+            $('.list2 li:eq(2)').css({backgroundColor:'gold'}).siblings().css({backgroundColor:'green'});
+            
+            // find() 选择div02内的class等于link1的元素
+            $('#div02').find('.link1').css({color:'#f40'});
+        });
+
+        
+        
+    </script>
+    <!-- <style>
+        .list li{
+            line-height: ;
+       }
+    </style> -->
+</head>
+<body>
+    <div id="div1">这是一个div元素</div>
+    <div>这是第二个div元素</div>
+    <p>这是一个p元素</p>
+
+    <div id="div2">
+        <a href="#">百度一下</a>
+        <span id="span01">span元素</span>
+    </div>
+
+    <div id="div02">
+        <p>
+            <a href="#" class="link1">腾讯网</a>
+            <span id="span02">span元素</span>
+        </p>
+    </div>
+    <div>
+        <ul class="list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+    
+
+    <ul class="list2">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+</body>
+</html>

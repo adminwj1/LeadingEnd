@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>模态框</title>
+		<script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<h1>模态框</h1>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal01">弹出模态框</button>
+		</div>
+		<!-- 
+			fade：模态框弹出效果
+		 -->
+		<div class="modal fade" id="modal01">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<!-- 模态框的头部 -->
+					<div class="modal-header">
+						弹框的标题
+					</div>
+					<div class="modal-body">
+						<!-- 弹框主体 -->
+						弹框主体
+					</div>
+					
+					<!-- 弹框底部 -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">确定</button>
+						<!-- 点击取消后模态框消失 -->
+						<button type="button" class="btn btn-warning" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

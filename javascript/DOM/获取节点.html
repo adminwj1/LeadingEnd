@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取节点</title>
+   
+</head>
+<body>
+    <div id="d1">Hello HTML DOM</div>
+    <!-- 通过标签名获取节点 -->
+    <div>hello javascript</div>
+    <div>hello BOM</div>
+    <div>hello DOM</div>
+
+    <!-- 通过类名获取节点 -->
+    <h1 class="d">hello javascript</h1>
+    <h2 class="d">hello BOM</h2>
+    <br>
+    <script>
+        var div1 = document.getElementById("d1");
+        document.write(div1);
+        document.write("<br>");
+
+        // 通过标签名获取元素节点
+        document.write("通过标签名获取元素节点");
+        var divs = document.getElementsByTagName('div');
+        for(i=0; i<divs.length; i++){
+            document.write(divs[i]);
+            document.write("<br>");
+        }
+
+        // 通过类名获取节点
+        document.write("通过类名获取节点");
+        var elements = document.getElementsByClassName("d");
+        for(i = 0; i < elements.length; i++){
+            document.write(elements[i]);
+            document.write("<br>");
+        }
+
+        // 通过表单元素的name获取元素节点
+        var 
+    </script>
+</body>
+</html>

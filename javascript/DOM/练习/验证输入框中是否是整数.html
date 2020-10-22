@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>验证输入框中是否是整数</title>
+    <script>
+        function judge(){
+            var oNumber = document.getElementById("number").value;
+            console.log(oNumber);
+            if (oNumber % 1 === 0){
+                alert("是整数");
+            }else{
+                alert("不是整数");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="number">
+    <input type="button" value="验证" onclick="judge()">
+</body>
+</html>

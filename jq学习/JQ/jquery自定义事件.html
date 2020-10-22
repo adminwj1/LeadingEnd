@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery自定义事件</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            $('#btn').bind('click',function(){
+                alert('click!');
+            });
+
+            $('#btn').bind('hello',function(){
+                alert('hello!');
+            });
+
+            // 触发事件
+            $('#btn2').click(function(){
+                // btn2触发btn自定义事件
+                $('#btn').trigger('hello');
+
+                // 触发原生事件，会触发所有的事件
+                $('#btn').trigger('click');
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="按钮" id='btn' name="">
+    <input type="button" value="按钮2" id="btn2", name="">
+</body>
+</html>

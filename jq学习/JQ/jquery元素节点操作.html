@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点操作</title>
+    <script src="./jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            // 创建节点
+            var $span = $('<a href="#">span元素</a>');
+            var $p = $('<p>p段落元素</p>');
+            var $h = $('<h1>页面标题</h1>');
+            // $('#div1').append($span);
+            // $('#div1').append($p);
+            
+            $('#div1').prepend($span);  // 在现存元素的的内部，前插入元素
+
+            $p.appendTo($('#div1'));    // 在现存元素的内部，后插入元素
+
+            $('#div1').before($h);      // 在现存元素的外部，前插入元素
+
+            // 节点删除
+            $p.remove();
+
+        })
+    </script>
+    <style></style>
+</head>
+<body>
+    <div id="div1">
+        这是一个div元素
+    </div>
+</body>
+</html>

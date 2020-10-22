@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>父节点关系</title>
+    <script>
+        // var node = null;
+        // function showParent(){
+        //     if (null == node){
+        //         node = document.getElementById("d1");
+        //         console.log(node);
+        //     }
+        //     if(document == node){
+        //         alert("已是根节点：document");
+        //     }else{
+        //         console(node.parentNode);
+        //         alert(node.parentNode);
+        //         node = node.parentNode;
+        //     }
+        // }
+        var node = null;
+        function showParent(){
+            if(null==node){
+                node = document.getElementById("d3");
+                console.log('1'+node);
+            }
+                
+            if(document == node){
+                console.log(node);
+                alert("2"+"已是根节点:document");
+            }
+                
+            else{
+                alert(node.parentNode);
+                node = node.parentNode;
+                console.log("3"+node);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="parentDiv">
+        <div id="d1">第一个div</div>
+        <div id="d2">第二个div</div>
+        <div id="d3">第三个div</div>
+    </div>
+    <button onclick="showParent()">不断递归d1的父节点</button>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态创建一个表</title>
+    
+    <style>
+        table{
+            border-collapse:collapse;
+            width:90%;
+        }
+        tr.odd{
+            background-color:#f8f8f8;
+        }
+        tr{
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            border-bottom-color: lightgray;
+            height:35px;
+        }
+        
+        td{
+            width:25%;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div id="d">
+
+    </div>
+    <script>
+        function createTD(text){
+            // 创建td
+            var td = document.createElement('td');
+            var text = document.createTextNode(text);
+            td.appendChild(text);
+            return td;
+        }
+
+        function createTR(texts){
+            // 接收table传入的值
+            // 创建tr
+            console.log(texts);
+            var tr = document.createElement("tr");
+            for (i=0; i<texts.length; i++){
+                var td = createTD(texts[i]);
+                console.log(createTD(texts[i]));
+                tr.appendChild(td);
+            }
+            return tr;
+        }
+
+        function createTable(rows){
+            // 创建table
+            console.log(rows)
+            var table =document.createElement("table");
+            for(var i=0; i<rows.length; i++){
+                // 调用createTR函数将rows[i]传入到该函数中
+                var tr = createTR(rows[i]);
+                // console.log(createTR(rows[i]));
+                table.appendChild(tr);  // 在将table节点添加到tr上
+            }
+            return table;
+        }
+        var row0 = new Array("id","名称","血量","伤害");
+        var row1 = new Array("1","gareen","340","58");
+        var row2 = new Array("2","teemo","320","76");
+        var row3 = new Array("3","annie","380","38");
+        var row4 = new Array("4","deadbrother","400","90");
+        var rows = new Array(row0,row1,row2,row3,row4);
+        var div = document.getElementById("d");
+        var table = createTable(rows);
+        div.appendChild(table);
+    </script>
+</body>
+</html>

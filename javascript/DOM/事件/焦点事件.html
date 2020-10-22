@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件</title>
+    <script>
+        // 焦点事件
+        function f(){
+            document.getElementById("message").innerHTML="输入框1获取了焦点";
+        }
+
+        function b(){
+            document.getElementById("message").innerHTML="输入框1失去了焦点";
+        }
+    </script>
+</head>
+<body>
+    <h1>焦点事件</h1>
+    <input type="text" onfocus="f()" onblur="b()" id="input1" placeHolder="输入框1">
+    <br>
+    <br>
+    <input type="text" id="input2" placeHolder="输入框2">
+    <div id="message"></div>
+</body>
+</html>

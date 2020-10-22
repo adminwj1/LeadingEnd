@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>层级菜单</title>
+    <script src="../jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            // $('.level1').click(function(){
+            //     console.log($(this).index());
+            //     $('.box div').eq($(this).index()).addClass('actv').siblings().removeClass('actv');
+            //     console.log($('.box div').eq($(this).index()))
+            // });
+
+            $('.level1').mouseover(function(){
+                $('.box div').eq($(this).index()).addClass('actv').siblings().removeClass('actv');
+            })
+        });
+    </script>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .menu{
+            margin: 0;
+            width: 100px;
+            height: 200px;
+            background-color:#3366cc;
+            padding: 0;
+            position: relative;
+        }
+
+        .menu div{
+            list-style: none;
+            margin-bottom: 50px;
+            border: 1px solid #afc6f6;
+            cursor: pointer;
+            
+        }
+
+        .box div{
+            width: 500px;
+            height: 300px;
+            background-color: pink;
+            margin-bottom: 10px;
+            position: absolute;
+            top:0;
+            left: 100px;
+        }
+
+        .box div.actv{
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class='level1'>装饰品</div>
+        <div class='level1'>化妆品</div>
+        <div class='level1'>养颜品</div>
+    </div>
+
+    <div class="box">
+        <div class="actv">内容一</div>
+        <div>内容二</div>
+        <div>内容三</div>
+    </div>
+</body>
+</html>

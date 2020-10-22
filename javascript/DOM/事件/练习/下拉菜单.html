@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下拉菜单</title>
+    <script>
+        function show(a){
+            console.log(a);
+            var aa = a.getElementsByTagName("ul")[0];
+            console.log(aa);
+            aa.style.display="block";
+        }
+
+        function hide(){
+            var oLevel = document.getElementsByClassName("box");
+            
+            for (i=0; i<oLevel.length; i++){
+                // console.log(oLevel[i]);
+                var d = oLevel[i];
+                d.style.display="none";
+            }
+        }
+    </script>
+
+    <style>
+        #menu{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background-color: darkgray;
+        }
+
+        .box{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: none;
+        }
+
+        .menu_li{
+            padding-right: 10px;
+            float: left;
+        }
+
+        a{
+            color: #000;
+            text-decoration: none;
+        }
+
+        #menu>li>a{
+
+            font-size: 20px;
+            
+        }
+
+        .box>li{
+            height: 30px;
+
+            /* border-bottom: 1px solid #fff; */
+            text-align: center;
+
+        }
+
+        .box>li>a{
+            line-height: 30px;
+            font-size: 16px;
+            color: #000;
+            
+        }
+
+        .box>li>a:hover{
+            font-size:16px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li class="menu_li" onmouseover="show(this)" onmouseout="hide(this)">
+            <a href="#" class="level1">武器</a>
+            <ul class="box" id="box1">
+                <li><a href="">大剑</a></li>
+                <li><a href="">屠龙</a></li>
+                <li><a href="">玄宗</a></li>
+                <li><a href="">七孔</a></li>
+            </ul>
+        </li>
+        <li class="menu_li" onmouseover="show(this)" onmouseout="hide(this)">
+            <a href="#" class="level1">护甲</a>
+            <ul class="box" id="box2">
+                <li><a href="">护甲</a></li>
+                <li><a href="">护腕</a></li>
+                <li><a href="">头盔</a></li>
+                <li><a href="">鞋子</a></li>
+            </ul>
+        </li>
+        <li class="menu_li" onmouseover="show(this)" onmouseout="hide(this)">
+            <a href="#" class="level1">英雄</a>
+            <ul class="box" id="box3">
+                <li><a href="">盖伦</a></li>
+                <li><a href="">提莫</a></li>
+                <li><a href="">安妮</a></li>
+                <li><a href="">死哥</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

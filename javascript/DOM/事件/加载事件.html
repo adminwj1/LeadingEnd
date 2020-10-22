@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加载事件</title>
+    <script>
+        function loadBody(){
+            document.getElementById("message1").innerHTML="文档加载成功";
+        }
+
+        function loadImg(){
+            document.getElementById("message2").innerHTML="图片加载成功";
+        }
+    </script>
+</head>
+<body onload="loadBody()">
+    <div id="message1"></div>
+    <div id="message2"></div>
+</body>
+<img onload="loadImg()" src="../../../HTML/image/log.jpg" alt="" srcset="">
+</html>

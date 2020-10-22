@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>键盘事件</title>
+    <script>
+        var number = 0;
+        function down(e){
+            console.log(e);
+            var text = "按下了键" + e.keyCode;
+            if(e.shiftKey==1){
+                // text += "并且按下了shift键";
+                text += " 并且按下了shift键";
+            }
+            document.getElementById("message").innerHTML=text;
+        }
+
+        function up(){
+            document.getElementById("message").innerHTML="弹起了键盘";
+        }
+        
+        function press(e){
+            var text = "按下了键" + e.keyCode;
+            console.log(e);
+            if(e.shiftKey==1){
+                text += " 并且按下了shift键";
+            }
+            document.getElementById("message").innerHTML=text ;
+        }
+    </script>
+
+</head>
+<body>
+    <br>
+    <input type="button" onkeydown="down(event)" value="用于演示按下keydown" >
+    <br>
+    <br>
+    <input type="button" value="用于演示按下keypress" onkeypress="press(event)">
+    <br>
+    <br>
+    <input type="button" value="用于演示弹起" onkeyup="up()">
+    <br>
+    <br>
+    <div id="message"></div>
+</body>
+</html>

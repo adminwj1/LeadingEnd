@@ -1,0 +1,130 @@
+<!-- 教程：https://cloud.tencent.com/developer/article/1583514 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>贪吃蛇</title>
+	</head>
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+		#container div, #box{
+			width: 20px;
+			height: 20px;
+			background-color: blue;
+			position: absolute;
+			text-align: center;
+			line-height: 20px;
+			color: #fff;
+			top: 0px;
+			left: 0px;
+			/* border: 1px solid #fff; */
+		}
+
+		#box{
+			left: 500px;
+			top: 300px;
+			background-color: red;
+		}
+
+		.off{
+			width: 20px;
+			height: 20px;
+			background-color: red;
+			position: absolute;
+			left:200px;
+			top: 100px;
+		}
+	</style>
+	<body>
+		<div id="container">
+			<!-- 地图的div -->
+				<div id="snake">1</div>
+				<div id="snake">2</div>
+				<div id="snake">3</div>
+				<div id="snake">4</div>
+		</div>
+
+		<!-- 碰撞事件 -->
+		<div id="box"></div>
+
+		<script type="text/javascript">
+			Odiv= document.getElementById('container');
+			Obox = document.getElementById('box');
+			snake= Odiv.getElementsByTagName("div");
+			for(var i=0; i<snake.length; i++){
+				// 排序
+				snake[i].style.left = (snake.length-i)*20+'px'
+				// console.log(snake[i].style.left);
+			}
+			
+			document.onkeydown = function(e){
+				if(col(snake[0],Obox)){
+					container.appendChild(Obox);
+					
+					var box = document.createElement("div");
+					document.body.appendChild(box);
+					box.className="off";
+				}else{
+					Obox.style.background = "red";
+				}
+				
+				
+				for(var i=snake.length-1;i>0;i--){
+					// 将整个身体进行移动
+					snake[i].style.left = snake[i-1].offsetLeft + "px";
+					snake[i].style.top = snake[i-1].offsetTop + "px";
+				}
+
+				
+
+				var e = window.event || e;
+				switch(e.keyCode){
+					case 37:
+						// 左
+						snake[0].style.left = snake[0].offsetLeft-20+"px";
+					break;
+					case 38:
+						// 上
+						snake[0].style.tophpp = snake[0].offsetTop-20+"px";
+					break;
+					case 39:
+						// 右
+						snake[0].style.left = snake[0].offsetLeft+20+"px";
+					break;
+					case 40:
+						// 下
+						snake[0].style.top = snake[0].offsetTop+20+"px";
+					break;
+				}
+			}
+
+			// 碰撞检测
+			function col(el1,el2){
+
+
+				// el1  蛇
+				// el2  红色方块
+				var r1 = el1.offsetLeft + el1.offsetWidth;	// 蛇的右边
+				var l1 = el1.offsetLeft;	// 蛇的左边
+				// console.log(l1);
+				var b1 = el1.offsetTop + el1.offsetHeight;	// 蛇的下边部分
+				var t1 = el1.offsetTop;	// 蛇的上边部分
+				// console.log(l1);
+
+				var l2 = el2.offsetLeft;
+				// console.log(l2)
+				var r2 = el2.offsetLeft + el2.offsetWidth;
+				var t2 = el2.offsetTop;
+				var b2 = el2.offsetTop + el2.offsetHeight;
+
+				if( r1 < l2 || l1 > r2 || b1 < t2 || t1 > b2){
+					return false;
+				}else{
+					return true;
+				}
+			}
+		</script>
+	</body>
+</html>

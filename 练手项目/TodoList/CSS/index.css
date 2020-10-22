@@ -1,0 +1,46 @@
+.container{
+	width: 95%;
+}
+
+
+.list-back{
+	width: 190px;
+	height: 400px;
+	background: pink;
+}
+
+.font-padd{
+	padding: 10px;
+}
+
+.input-mar-top{
+	margin-top: 45px;
+}
+
+.font-style{
+	color: #000;
+	cursor: pointer;
+}
+
+.font-style:hover{
+	text-decoration: none; 
+	color: #000000;
+}
+
+.items{
+	padding: 10px;
+	font-size: 17px;
+	border-bottom: 1px solid #E3E3E3;
+}
+
+.items>a{
+	color: #f60;
+}
+
+.items>a:hover{
+	color: #E3E3E3;
+}
+
+.items>s{
+	color: #E3E3E3;
+}

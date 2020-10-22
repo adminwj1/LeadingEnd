@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日期对象</title>
+    <script>
+        window.onload = function(){
+            // new Date() 创建日期对象
+            var d = new Date();
+            document.write('new Date()：' +d);
+            document.write("<br />");
+            // 年/月/日
+            document.write("分别获取年月日：");
+            document.write(d.getFullYear());    // 年
+            document.write("/");
+            document.write(d.getMonth()+1);     // 月
+            document.write("/");
+            document.write(d.getDate());    // 天
+
+
+            document.write("<br />");
+            // 分：秒：毫秒
+            document.write("分别获取时:分:秒:毫秒");
+            document.write(d.getHours());    // 小时
+            document.write("/");
+            document.write(d.getMilliseconds());     // 分钟
+            document.write("/");
+            document.write(d.getSeconds());    // 秒
+            document.write("/");
+            document.write(d.getMilliseconds());    // 毫秒
+
+            // 一周的第几天
+            document.write("<br />");
+            var day = new Date().getDay();
+            console.log(day);
+            var weeks = new Array("星期天","星期一","星期二","星期三","星期四","星期五","星期六");
+            document.write('今天是：' + weeks[day]);
+            document.write("<br />");
+            // 经历的毫秒数
+            var time = new Date().getTime();
+            document.write("从1998.5/18到今天的毫秒数：" + time);
+
+            // 修改日期和时间
+            // 修改日期对象的值为世界末日:
+            document.write("修改日期对象的值为世界末日:<br>");
+            d.setFullYear(2012);
+            d.setMonth(11); //月份是基0的，所以11表示12月
+            d.setDate(12);
+
+            d.setHours(0);
+            d.setMinutes(0);
+            d.setSeconds(0);
+
+            document.write(d);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

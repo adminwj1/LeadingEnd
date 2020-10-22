@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery事件绑定</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            // bind绑定事件，可以写多个事件
+            $('#btn').bind('click mouseover',function(){
+                alert('hello!');
+                // unbind取消绑定事件
+                $(this).unbind('mouseover');
+            });
+
+          
+        });
+    </script>
+    <style></style>
+</head>
+<body>
+    <input type="button" name="" id="btn" value="按钮">
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练习-验证长度</title>
+    <script>
+        function register(){
+            var oName = document.getElementById("name").value;
+            var oAac = document.getElementById("aac");
+            oAac.style.color="#f40";
+            console.log(oName.length);
+            if (oName.length < 3){
+                oAac.innerHTML="*账号字符串最小为3";
+            }else if(oName.length > 5){
+                oAac.innerHTML="*账号最长为5个字符串";
+            }else{
+                alert("注册成功！")
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <label for="name">
+            账号：
+        </label>
+        <input type="text" name="" id="name">
+        <input type="button" value="注册" onclick="register()">
+        <span id="aac"></span>
+    </form>
+</body>
+</html>

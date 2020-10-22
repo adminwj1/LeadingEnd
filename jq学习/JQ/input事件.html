@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            // 直接获取光标
+            $('#txt01').focus();
+            // 获取焦点
+            $('#txt01').focus(function(){
+                console.log('focus')
+            });
+            
+            // 失去焦点
+            $('#txt01').blur(function(){
+                // 离开input后光标失去焦点
+                console.log('blur');
+            });
+
+            // change 发生变化事件
+            $('#txt01').change(function(){
+                // 只有input文本框发生变化后才会产生change事件
+                console.log('change');
+            });
+
+            // keyup 松开按键后触发事件
+            $('#txt01').keyup(function(){
+                console.log('keyup');
+            })
+
+            // 改版窗口尺寸时触发resize事件
+            $(window).resize(function(){
+                console.log('2');
+            })
+        });
+
+    </script>
+    <style></style>
+</head>
+<body>
+    <input type="text" name="" id="txt01">
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>父子组件传值</title>
+		<script src="../vue-v2.6.10.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- props可以获取属性的值 -->
+			<my cc="kk"></my>
+			<!-- v-bind绑定属性的技术，实现属性获取data中的数据 -->
+			<!-- 从而传递给子级组件，实现父级组件向子级组件传值的效果 -->
+			<my v-bind:cc="msg"></my>
+		</div>
+		
+		<script type="text/javascript">
+			var app = new Vue({
+				el:'#app',
+				data:{
+					msg:'没事干'
+				},
+				components:{
+					my:{
+						// props 获取自动标签中自定义属性的值
+						props:['cc'],
+						template:"<s>{{cc}}</s> "
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

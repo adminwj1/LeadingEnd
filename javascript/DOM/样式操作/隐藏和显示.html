@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐藏和显示</title>
+    <script>
+        function hide(){
+            var d = document.getElementById("d");
+            d.style.display="none";
+        }
+        function show(){
+            var d = document.getElementById("d");
+            d.style.display="block";
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="隐藏" onclick="hide()">
+    <input type="button" value="显示" onclick="show()">
+    <div id="d">
+        这是一个div
+    </div>
+</body>
+</html>

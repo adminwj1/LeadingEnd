@@ -1,0 +1,29 @@
+setTimeout      只执行一次
+函数setTimeout(functionname, 距离开始时间毫秒数 );
+通过setTimeout在制定的毫秒数时间后，执行一次 函数functionname
+
+setInterval     不停地重复执行
+函数setInterval(函数名, 重复执行的时间间隔毫秒数 );
+通过setInterval重复执行同一个函数，重复的时间间隔由第二个参数指定
+
+clearInterval   终止重复执行
+<p>每隔1秒钟，通过document.write打印当前时间</p>
+<script>
+    function printTime(){
+    var d = new Date();
+    document.write(d.getHours());
+    document.write(":");
+    document.write(d.getMinutes());
+    document.write(":");
+    document.write(d.getSeconds());
+    document.close();
+    }
+    var t = setInterval(printTime,1000);
+</script>
+
+document.write()    不要在setInterval调用的函数中使用document.write();
+部分浏览器，比如firefox有这个问题，其他浏览器没这个问题。
+
+假设setInterval调用的函数是printTime, 在printTime中调用document.write();
+只能看到一次打印时间的效果。
+这是因为document.write，会创建一个新的文档，而新的文档里，只有打印出来的时间字符串，并没有setInterval这些javascript调用，所以只会看到执行一次的效果。

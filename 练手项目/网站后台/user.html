@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Maizi Admin</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="CSS/index.css"/>
+		<script src="bootstrap/js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.container{
+				width: 98%
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav class="nav navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					<a href="admin.html" class="navbar-brand">Maizi Admin</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="admin.html"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;后台首页</a></li>
+						<li class="active"><a href="user.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户管理</a></li>
+						<li><a href="content.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;内容管理</a></li>
+						<li><a href="tag.html"><span class="glyphicon glyphicon-tags"></span>&nbsp;&nbsp;标签管理</a></li>
+					</ul>
+					
+					<ul class="nav navbar-nav navbar-right margin_right">
+						<!-- 下拉菜单设置 -->
+						<li class="dropdown">
+							
+							<a type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;
+								admin
+								<!-- 下拉图标 -->
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="admin.html"><span class="glyphicon glyphicon-screenshot"></span>&nbsp;&nbsp;前台首页</a></li>
+								<li><a href="admin.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人主页</a></li>
+								<li><a href="admin.html"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;个人设置</a></li>
+								<li><a href="admin.html"><span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;账户中心</a></li>
+								<li><a href="admin.html"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;我的手藏</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;退出</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="container mar-t15">
+			<div class="row">
+				<div class="col-md-2 hidden-xs text-center">	<!-- 在小屏幕下隐藏 -->
+					<div class="list-group">
+						<a href="user.html" class="list-group-item active">用户管理</a>
+						<a href="user_search.html" class="list-group-item">用户搜索</a>
+						<a href="" role="button" data-toggle="modal" data-target="#myModal" class="list-group-item">添加用户</a>
+					</div>
+				</div>
+				
+				<div class="col-md-10">
+					<!-- 分页标签 -->
+					<div class="page-header">
+						<h1>用户管理</h1>
+					</div>
+					<ul class="nav nav-tabs pal-10">
+						<li class="active">
+							<a href="user.html">用户列表</a>
+						</li>
+						<li>
+							<a href="user_search.html">用户搜索</a>
+						</li>
+						<li>
+							<a href="" role="button" data-toggle="modal" data-target="#myModal">添加用户</a>
+						</li>
+					</ul>
+					
+					<table class="table">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>用户名</th>
+								<th>邮箱</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>张山</td>
+								<td>12346789@mailez.com</td>
+								<td>
+									<div role="presentation" class="dropdown">
+									    <button class=" btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+									      操作 <span class="caret"></span>
+									    </button>
+									    <ul class="dropdown-menu">
+											<li><a href="#">编辑</a></li>
+											<li><a href="#">删除</a></li>
+											<li><a href="#">锁定</a></li>
+											<li><a href="#">修改密码</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>李四</td>
+								<td>12346789@mailez.com</td>
+								<td>
+									<div role="presentation" class="dropdown">
+									    <button class=" btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+									      操作 <span class="caret"></span>
+									    </button>
+									    <ul class="dropdown-menu">
+											<li><a href="#">编辑</a></li>
+											<li><a href="#">删除</a></li>
+											<li><a href="#">锁定</a></li>
+											<li><a href="#">修改密码</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td>王五</td>
+								<td>12346789@mailez.com</td>
+								<td>
+									<div role="presentation" class="dropdown">
+									    <button class=" btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+									      操作 <span class="caret"></span>
+									    </button>
+									    <ul class="dropdown-menu">
+											<li><a href="#">编辑</a></li>
+											<li><a href="#">删除</a></li>
+											<li><a href="#">锁定</a></li>
+											<li><a href="#">修改密码</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">4</th>
+								<td>小明</td>
+								<td>12346789@mailez.com</td>
+								<td>
+									<div role="presentation" class="dropdown">
+									    <button class=" btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+									      操作 <span class="caret"></span>
+									    </button>
+									    <ul class="dropdown-menu">
+											<li><a href="#">编辑</a></li>
+											<li><a href="#">删除</a></li>
+											<li><a href="#">锁定</a></li>
+											<li><a href="#">修改密码</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<nav aria-label="Page navigation" class="pull-right">
+					  <ul class="pagination">
+					    <li>
+					      <a href="#" aria-label="Previous">
+					        <span aria-hidden="true">&laquo;</span>
+					      </a>
+					    </li>
+					    <li class="active"><a href="#">1</a></li>
+					    <li><a href="#">2</a></li>
+					    <li><a href="#">3</a></li>
+					    <li><a href="#">4</a></li>
+					    <li><a href="#">5</a></li>
+					    <li>
+					      <a href="#" aria-label="Next">
+					        <span aria-hidden="true">&raquo;</span>
+					      </a>
+					    </li>
+					  </ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<!-- 添加用户弹框 -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				  <h4 class="modal-title" id="myModalLabel">添加用户</h4>
+				</div>
+				<div class="modal-body">
+				  <form action="#" method="">
+					  <div class="form-group">
+						  <label for="user">用户名</label>
+						  <input type="text" name="" id="user"  class= "form-control" placeholder="请输入用户" value="" />
+					  </div>
+					  <div class="form-group">
+						  <label for="pass">密码</label>
+						  <input type="password" name="" id="pass"  class= "form-control" placeholder="请输入密码" value="" />
+					  </div>
+					  
+					  <div class="form-group">
+						  <label for="pass1">确认密码</label>
+						  <input type="password" name="" id="pass1"  class= "form-control" placeholder="请输入密码" value="" />
+					  </div>
+					  
+					  <div class="form-group">
+						  <label for="email">邮箱</label>
+						  <input type="email" name="" id="email"  class= "form-control" placeholder="请输入邮箱" value="" />
+					  </div>
+					  
+					  <div class="form-group">
+						  <label for="useradd">用户组</label>
+						  <select name="" id="useradd" class="form-control">
+							  <option value="">限制会员</option>
+							  <option value="">新手上路</option>
+							  <option value="">注册会员</option>
+							  <option value="">中级会员</option>
+							  <option value="">高级会员</option>
+						  </select>
+					  </div>
+				  </form>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				  <button type="button" class="btn btn-primary">提交</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	</body>
+</html>

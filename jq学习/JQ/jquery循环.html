@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery循环</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            // each 相当于for循环
+            // index 对应的索引值
+            $('.list li').each(function(index){
+                // this 相当于每个li
+                $(this).html(index);
+                console.log(index);
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul class="list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>组件实例对象</title>
+		<script src="../vue-v2.6.10.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		/*
+			组件就是实例对象，vue实例对象就是一个组件
+			组件是带有名字的可复用的Vue实例，所以他们与new vue实例对象接收相同的参数选项data、computed、watch、methods，但el例外。
+			组件和实例对象可以接收相同的参数选项，但在具体使用中，vue实例对象的data与组件中的data还是有差异的，在我们自己写的组件中，data必须是一个函数。
+		*/
+		<div id="app">
+			<mytemp></mytemp>
+		</div>
+		<script type="text/javascript">
+			var app = new Vue({
+				el:'#app',
+				data:{
+					
+				},
+				components:{
+					mytemp:{
+						data:function(){
+							return {
+								msg:'1231'
+							}
+							
+						},
+						methods:{
+							cli:function(){
+								alert(this.msg);
+							}
+						},
+						template:"<i @click='cli'>我真帅</i>"
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

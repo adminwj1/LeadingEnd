@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建属性节点</title>
+    <script>
+        function add(){
+            var a = document.createElement("a");
+            var content = document.createTextNode("http://www.12306.com");
+            a.appendChild(content);
+
+            var href = document.createAttribute("href");    // 创建一共属性节点href
+            href.nodeValue="http://www.baidu.com";      // 设置节点值
+            a.setAttributeNode(href);   // 通过setAttributeNode 把该属性设置到元素节点a上
+            var div1 = document.getElementById("d");
+            div1.appendChild(a);
+        }
+    </script>
+</head>
+<body>
+    <div id="d">Hello HTML DOM<br></div>
+    <button onclick="add()">在div中最佳一共超链接</button>
+</body>
+</html>

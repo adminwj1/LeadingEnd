@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery-jsonp使用360搜索接口</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        /*
+        https://sug.so.360.cn/suggest?callback=suggest_so&encodein=utf-8&encodeout=utf-8&format=json&src=so_home&fields=word&word=%E6%B7%98%E5%AE%9D&llbq=A5%2CB5%2CC5%2CD5&cache=&id=
+        */
+        $.ajax({
+            url:'https://sug.so.360.cn/suggest?',
+            type:'get',
+            dataType:'jsonp',
+            data:{word:'c'}
+        })
+        .done(function(data){
+            console.log(data);
+        })
+        .fail(function(){
+            console.log('error');
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

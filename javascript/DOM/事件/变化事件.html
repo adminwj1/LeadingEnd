@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变化事件</title>
+    <script>
+        function change(){
+            var message = document.getElementById("message");
+            var t1 = document.getElementById("t1");
+            message.innerHTML = "输入框的值变为了：" + t1.value;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="t1" onchange="change()" value="">
+    <br>
+    <br>
+    <input type="button" value="令输入框失去焦点的按钮" >
+    <br><br>
+    <div id="message"></div>
+</body>
+</html>
